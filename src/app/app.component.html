@@ -16,7 +16,7 @@
 
   <div class="courses">
 
-    <course-card *ngFor="let course of  courses  "
+    <course-card *ngFor="let course of  (courses$ | async)  "
                  (courseChanged)="save($event)"
                  type="beginner"
                  [course]="course">
